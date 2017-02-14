@@ -4,6 +4,7 @@ class ambari::agent(
   $ambari_server             = 'localhost',
   $ambari_server_port        = '8440',
   $ambari_server_secure_port = '8441',
+  $ambari_user               = 'root',
   $service_name              = $::ambari::params::agent_service_name,
   $service_ensure            = $::ambari::params::agent_service_ensure,
   $service_enable            = $::ambari::params::agent_service_enable,
