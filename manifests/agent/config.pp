@@ -8,7 +8,7 @@ class ambari::agent::config() {
 
   file { '/etc/ambari-agent/conf/ambari-agent.ini':
     ensure  => 'file',
-    owner   => 'root',
+    owner   => $ambari_user,
     group   => 'root',
     mode    => '0640',
     content => template('ambari/agent/ambari-agent.ini.erb'),
