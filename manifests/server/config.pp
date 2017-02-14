@@ -1,8 +1,9 @@
 class ambari::server::config (
-  $owner      = 'root',
   $db_backend = '',
   $settings   = {}
 ) {
+
+  $owner = $::ambari::server::ambari_user,
 
   file { '/etc/ambari-server/conf/ambari.properties':
     ensure => file,
